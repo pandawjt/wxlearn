@@ -15,6 +15,13 @@ Page({
             url: '../logs/logs'
         })
     },
+    clickMe: function(){
+        // 方法内部this指向Page,而非点击的button
+        console.log(this);
+        wx.navigateTo({
+            url: '../mypage/mypage',
+        })
+    },
     onLoad: function () {
         if (app.globalData.userInfo) {
             this.setData({
