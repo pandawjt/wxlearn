@@ -1,6 +1,31 @@
 # 学习笔记
 
 ## app.json配置文件
+```js
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "Demo"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "日志"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
+```
 app.json进行对整个项目的配置,
 其中:
 - pages是所有页面的路径配置(写在第一个的就是项目的入口文件)(路径+文件名,但是不需要写后缀,因为小程序会自动找.json.wxml.wxss.js四个文件)
@@ -91,8 +116,9 @@ App({
         // 小程序启动之后执行函数(钩子函数)
     }
 })
-
 ```
+
+## app.json配置文件
 
 页面构造器:
 ```js

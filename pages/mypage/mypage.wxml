@@ -1,4 +1,7 @@
 <!--pages/mypage/mypage.wxml-->
 <view class='container'>
-    <text>love Xiu</text>
+    <button bindtap='tap'>Click Me</button>
+    <view wx:for='{{array}}'>
+        {{index}}: {{item.message}}
+    </view>
 </view>
