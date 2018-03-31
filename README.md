@@ -4,12 +4,12 @@
 app.json进行对整个项目的配置,
 其中:
 - pages是所有页面的路径配置(写在第一个的就是项目的入口文件)(路径+文件名,但是不需要写后缀,因为小程序会自动找.json.wxml.wxss.js四个文件)
- ```js
+```js
 "pages":[
     "pages/index/index",
     "pages/logs/index"
 ]
- ```
+```
 - window字段是用于设置小程序的状态栏,导航栏.标题.窗口背景色
   + navigationBarBackgroundColor: 导航栏背景颜色(色值)
   + navigationBarTextStyle: 导航栏标题颜色(仅i支持white/black)
@@ -21,7 +21,7 @@ app.json进行对整个项目的配置,
   + backgroundColorBottom: 底部窗口颜色i值(仅ios支持)
   + enablePullDownRefresh: 是否开启下拉刷新
   + onReachBottomDistance: 页面上拉触底事件触发时据页面底边距离(单位px)
-  ```js
+```js
 "window": {
     "navigationBarBackgroundColor": "#000000",
     "navigationBarTextStyle": "white",
@@ -34,7 +34,7 @@ app.json进行对整个项目的配置,
     "enablePullDownRefresh": "false",
     "onReachBottomDistance": "50"
   }
-  ```
+```
 - tabBar字段配置tab栏列表(包括名字和页面路径)
  + color: tab上的文字颜色
  + selectedColor: tab上的文字选中时的颜色
@@ -46,7 +46,7 @@ app.json进行对整个项目的配置,
     - iconPath: 图片路径(icon限制40kb,建议81px*81px,当position为top,此参数无效,不支持网络图片)
     - selectedIconPath: 选中图片路径(同上)
  + position: tab的位置(可选top/botoom)
- ```js
+```js
 "tabBar": {
     "color": "#123456",
     "selectedColor": "#654321",
@@ -65,13 +65,14 @@ app.json进行对整个项目的配置,
       "selectedIconPath": "../../sdajfkl/sdkfjlasdjlk.jpg"
     }]
   },
- ```
+```
 - networkTime字段设置网络超时时间(单位毫秒,均默认6000ms)
     + request: wx.request的超时i时间
     + connectSocket: wx.connectSocket的超时时间
     + uploadFile: wx.uploadFile的超时时间
     + downloadFile: wx.downloadFile的超时时间
 - debug字段配置是否开启debug模式
+    + 可以在开发者工具中开启debug模式,其信息有: Page的注册 / 页面路由 / 数据更新 / 事件触发
 
 ## 页面加载顺序
 每一个页面包含4个页面(.json/.wxml/.wxss/.js);
